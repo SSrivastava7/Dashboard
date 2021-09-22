@@ -1,5 +1,9 @@
 import react,{useState}from 'react';
-import Login from './Component/Login';
+import {BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import Login from '../Component/Login';
+import Home from '../Component/Home';
+import About from '../Component/About';
+import NavBar from '../Component/NavBar';
 function App(){
     const adminUser={
         email:"admin@admin.com",
@@ -19,10 +23,7 @@ function App(){
              name:details.name,
              email:details.email
          });
-     } else {
-         //console.log("Details do not match");
-         setError("Details do not match");
-        }
+     }
      const Logout=()=>{
          setUser({name:"",email:""});
      }

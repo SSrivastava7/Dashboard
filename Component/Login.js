@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Button from './Component/Button';
 
 function Login({Login,error}) {
     const [details,setDetails]=useState({name:"",email:"",password:""});
@@ -25,6 +26,7 @@ function Login({Login,error}) {
                <input type="password" name="password" id="password" onChange={e=>setDetails({...details,password:e.target.value})} value={details.password}/>
                </div>
                <input type="submit" value="login"></input>
+               <Button/>
                </div>
        </form>
     )
